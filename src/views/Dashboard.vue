@@ -1,20 +1,22 @@
 <template>
-  <div class="p-6 space-y-6">
-    <div class="flex flex-wrap items-center gap-3 justify-between">
-      <div class="flex items-center gap-2">
-        <select class="border border-gray-300 rounded px-3 py-2 text-sm">
+  <div class="p-4 sm:p-6 space-y-6">
+    <!-- Top Filters -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+        <select class="border border-gray-300 rounded px-3 py-2 text-sm w-full sm:w-auto">
           <option>Select store</option>
         </select>
-        <button class="text-xs border rounded px-3 py-2 text-gray-600 hover:bg-gray-100">
+        <button class="text-xs border rounded px-3 py-2 text-gray-600 hover:bg-gray-100 w-full sm:w-auto">
           COMPARE BRANCHES
         </button>
       </div>
-      <input type="date" class="border rounded px-3 py-2 text-sm text-gray-600" value="2025-05-20" />
+      <input type="date" class="border rounded px-3 py-2 text-sm text-gray-600 w-full sm:w-auto" value="2025-05-20" />
     </div>
 
+    <!-- Net Sales -->
     <div>
       <h2 class="text-lg font-semibold mt-4">Net sales</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-2">
         <StatsCard
           v-for="(item, i) in stats"
           :key="'net-' + i"
@@ -26,9 +28,10 @@
       </div>
     </div>
 
+    <!-- Gross Sales -->
     <div>
       <h2 class="text-lg font-semibold mt-6">Gross sales</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-2">
         <StatsCard
           v-for="(item, i) in stats"
           :key="'gross-' + i"

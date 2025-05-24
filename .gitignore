@@ -1,6 +1,8 @@
+
 # Node modules
 node_modules/
 dist/
+.env
 .vscode/
 .DS_Store
 
@@ -8,3 +10,10 @@ dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Vercel
+.vercel/
+
+# Optional cache
+.cache/
+.temp/
